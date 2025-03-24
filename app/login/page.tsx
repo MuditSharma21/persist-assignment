@@ -54,6 +54,11 @@ export default function LoginPage() {
         <CardHeader>
           <CardTitle className="text-2xl text-center">Welcome Back</CardTitle>
         </CardHeader>
+        <div className="text-red-300 text-sm mx-4">Note* : At this moment only my personal email address can be used to signin as Resend only allows that limited functionality without an official domain. Below are the login and password you can use to login -</div>
+        <div>
+            <div className="text-red-300 text-sm mx-4">Email - muditsharma8791@gmail.com</div>
+            <div className="text-red-300 text-sm mx-4">Password - careermudit</div>
+          </div>
         <CardContent>
           <form onSubmit={handleSubmit} className="space-y-4">
             <div className="space-y-2">

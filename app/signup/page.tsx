@@ -196,7 +196,7 @@ export default function SignupPage() {
   };
 
   return (
-    <div className="bg-gradient-to-tr from-black via-[rgb(104,52,164)] via-65% to-[rgb(31,30,30)] h-screen">
+    <div className="bg-gradient-to-tr from-black via-[rgb(104,52,164)] via-65% to-[rgb(31,30,30)] h-screen'">
       <div className="container max-w-md mx-auto py-12 ">
         <Card className="bg-transparent text-white">
           <CardHeader>
@@ -204,6 +204,11 @@ export default function SignupPage() {
               {showOtpInput ? "Verify Your Email" : "Create Your Account"}
             </CardTitle>
           </CardHeader>
+          <div className="text-red-300 text-sm mx-4">Note* : At this moment only my personal email address can be used to signin as Resend only allows that limited functionality without an official domain. Below are the login and password you can use to login -</div>
+          <div>
+            <div className="text-red-300 text-sm mx-4">Email - muditsharma8791@gmail.com</div>
+            <div className="text-red-300 text-sm mx-4">Password - careermudit</div>
+          </div>
           <CardContent>
             {!showOtpInput ? (
               <FormProvider {...form}>
