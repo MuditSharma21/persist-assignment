@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import { motion } from "motion/react";
 import { cn } from "@/lib/utils";
 
-export const WobbleCard = ({
+export  const WobbleCard = ({
   children,
   containerClassName,
   className,
@@ -12,8 +12,8 @@ export const WobbleCard = ({
   containerClassName?: string;
   className?: string;
 }) => {
-  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
-  const [isHovering, setIsHovering] = useState(false);
+  const [mousePosition, setMousePosition] = React.useState({ x: 0, y: 0 });
+  const [isHovering, setIsHovering] = React.useState(false);
 
   const handleMouseMove = (event: React.MouseEvent<HTMLElement>) => {
     const { clientX, clientY } = event;
@@ -22,6 +22,7 @@ export const WobbleCard = ({
     const y = (clientY - (rect.top + rect.height / 2)) / 20;
     setMousePosition({ x, y });
   };
+
   return (
     <motion.section
       onMouseMove={handleMouseMove}
@@ -42,8 +43,7 @@ export const WobbleCard = ({
       )}
     >
       <div
-        className="relative  h-full shadow-[inset_0px_2px_20px_-3px_rgba(_255,_255,_255,1)] border  sm:mx-0 sm:rounded-2xl overflow-hidden"
-        
+        className="relative h-full shadow-[inset_0px_2px_20px_-3px_rgba(_255,_255,_255,1)] border sm:mx-0 sm:rounded-2xl overflow-hidden"
       >
         <motion.div
           style={{
@@ -54,22 +54,9 @@ export const WobbleCard = ({
           }}
           className={cn("h-full px-4 py-20 sm:px-10", className)}
         >
-          {/* <Noise /> */}
           {children}
         </motion.div>
       </div>
     </motion.section>
   );
 };
-
-// const Noise = () => {
-//   return (
-//     <div
-//       className="absolute inset-0 w-full h-full scale-[1.2] transform opacity-10 [mask-image:radial-gradient(#fff,transparent,75%)]"
-//       style={{
-//         backgroundImage: "url(/noise.webp)",
-//         backgroundSize: "30%",
-//       }}
-//     ></div>
-//   );
-// };

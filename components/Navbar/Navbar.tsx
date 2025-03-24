@@ -5,8 +5,10 @@ import { Button } from "../ui/button"
 import { CA } from "../CALogo/CA"
 import { useState } from "react"
 import { Menu, X } from "lucide-react"
+import { useSession } from "next-auth/react"
 
 export const Navbar = () => {
+    const { data: session, status } = useSession()
     const [isMenuOpen, setIsMenuOpen] = useState(false)
 
     const toggleMenu = () => {
@@ -22,23 +24,26 @@ export const Navbar = () => {
                 
                 {/* Desktop Navigation */}
                 <div className="hidden md:flex gap-x-6 lg:gap-x-10 items-center text-white">
-                    <Link href={'/'}>
-                        Home
-                    </Link>
-                    <Link href={'/search-for-jobs'}>
-                        Search for Jobs
-                    </Link>
-                    <Link href={'/start-hiring'}>
-                        Start Hiring
-                    </Link>
+                    <Link href={'/'} className="hover:text-black">Home</Link>
+                    <Link href={'/search-for-jobs'} className="hover:text-black">Search for Jobs</Link>
+                    <Link href={'/start-hiring'} className="hover:text-black">Start Hiring</Link>
                 </div>
                 
+                {/* Conditional Login / Dashboard Button */}
                 <div className="hidden md:block">
-                    <Link href={'/auth/signin'}>
-                        <Button className="text-sm py-4 px-6 lg:py-6 lg:px-9 bg-[rgb(149,126,234)] rounded-xl text-white hover:text-black flex gap-x-2 border shadow-[inset_0px_5px_20px_-3px_rgba(_255,_255,_255,1)]">
-                            Login
-                        </Button>
-                    </Link>
+                    {status === "authenticated" ? (
+                        <Link href={'/dashboard'}>
+                            <Button className="text-sm py-4 px-6 lg:py-6 lg:px-9 bg-[rgb(149,126,234)] rounded-xl text-white hover:text-black flex gap-x-2 border shadow-[inset_0px_5px_20px_-3px_rgba(_255,_255,_255,1)]">
+                                Dashboard
+                            </Button>
+                        </Link>
+                    ) : (
+                        <Link href={'/login'}>
+                            <Button className="text-sm py-4 px-6 lg:py-6 lg:px-9 bg-[rgb(149,126,234)] rounded-xl text-white hover:text-black flex gap-x-2 border shadow-[inset_0px_5px_20px_-3px_rgba(_255,_255,_255,1)]">
+                                Login
+                            </Button>
+                        </Link>
+                    )}
                 </div>
                 
                 {/* Mobile Menu Button */}
@@ -74,14 +79,21 @@ export const Navbar = () => {
                     >
                         Start Hiring
                     </Link>
-                    <Link 
-                        href={'/auth/signin'}
-                        onClick={() => setIsMenuOpen(false)}
-                    >
-                        <Button className="w-full py-3 bg-[rgb(149,126,234)] rounded-xl text-white hover:text-black border shadow-[inset_0px_5px_20px_-3px_rgba(_255,_255,_255,1)]">
-                            Login
-                        </Button>
-                    </Link>
+
+                    {/* Mobile version of Login / Dashboard button */}
+                    {status === "authenticated" ? (
+                        <Link href={'/dashboard'} onClick={() => setIsMenuOpen(false)}>
+                            <Button className="w-full py-3 bg-[rgb(149,126,234)] rounded-xl text-white hover:text-black border shadow-[inset_0px_5px_20px_-3px_rgba(_255,_255,_255,1)]">
+                                Dashboard
+                            </Button>
+                        </Link>
+                    ) : (
+                        <Link href={'/login'} onClick={() => setIsMenuOpen(false)}>
+                            <Button className="w-full py-3 bg-[rgb(149,126,234)] rounded-xl text-white hover:text-black border shadow-[inset_0px_5px_20px_-3px_rgba(_255,_255,_255,1)]">
+                                Login
+                            </Button>
+                        </Link>
+                    )}
                 </div>
             )}
         </div>

@@ -4,7 +4,7 @@ import { useState, useRef, useId, useEffect } from "react";
 interface SlideData {
   title: string;
   src: string;
-  description?: string; // Added description field
+  description?: string;
   isVideo?: boolean;
 }
 
@@ -57,7 +57,7 @@ const Slide = ({ slide, index, current, handleSlideClick }: SlideProps) => {
   }, [current, index, slide.isVideo]);
 
   const togglePlayPause = (e: React.MouseEvent) => {
-    e.stopPropagation(); // Prevent slide click
+    e.stopPropagation();
     
     if (!videoRef.current) return;
     
@@ -80,7 +80,7 @@ const Slide = ({ slide, index, current, handleSlideClick }: SlideProps) => {
     <div className="">
       <li
         ref={slideRef}
-        className="flex flex-1 flex-col items-center justify-center relative text-center text-white opacity-100 transition-all duration-300 ease-in-out w-[40vmin] h-[100vmin] mx-[4vmin] z-10"
+        className="flex flex-1 flex-col items-center justify-center relative text-center text-white opacity-100 transition-all duration-300 ease-in-out w-[50vmin] lg:w-[20vmin] xl:w-[35vmin] h-[100vmin] mx-[4vmin] z-10"
         onClick={() => handleSlideClick(index)}
         style={{
           transform:
@@ -190,7 +190,7 @@ export function Carousel({ slides }: CarouselProps) {
 
   return (
     <div
-      className="relative w-[30vmin] h-[100vmin] mx-auto"
+      className="relative w-[57vmin] xl:w-[35vmin] lg:w-[23vmin] h-[110vmin] mt-20 sm:mt-5 lg:h-[48vmin] xl:h-[70vmin] mx-auto"
       aria-labelledby={`carousel-heading-${id}`}
     >
       <ul

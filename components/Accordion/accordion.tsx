@@ -1,6 +1,6 @@
 "use client"
 import React, { useState } from 'react';
-import { Eye } from 'lucide-react';
+import { Eye, EyeClosed, EyeOff } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
 const AccordionItem = ({ number, title, content }: { number: string; title: string; content: string }) => {
@@ -22,7 +22,11 @@ const AccordionItem = ({ number, title, content }: { number: string; title: stri
           className="bg-white/10 rounded-full p-1 sm:p-2 shadow-[inset_0px_0px_30px_-3px_rgba(_255,_255,_255,.5)] transition-colors"
           aria-label={isOpen ? "Close section" : "Open section"}
         >
-          <Eye size={16} className="sm:size-20 text-white" />
+          {isOpen ? (
+              <Eye size={20} className="text-white" />
+          ) : (
+              <EyeOff size={20} className='text-white'/>
+          )}
         </button>
       </div>
       
