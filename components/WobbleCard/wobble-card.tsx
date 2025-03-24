@@ -12,8 +12,8 @@ export  const WobbleCard = ({
   containerClassName?: string;
   className?: string;
 }) => {
-  const [mousePosition, setMousePosition] = React.useState({ x: 0, y: 0 });
-  const [isHovering, setIsHovering] = React.useState(false);
+  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
+  const [isHovering, setIsHovering] = useState(false);
 
   const handleMouseMove = (event: React.MouseEvent<HTMLElement>) => {
     const { clientX, clientY } = event;

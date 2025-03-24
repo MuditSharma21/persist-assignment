@@ -54,6 +54,7 @@ export const HeroSection = () => {
 
     toast.success("LinkedIn URL saved successfully!");
   } catch (error) {
+    console.log(error)
     toast.error("Something went wrong. Please try again.");
   } finally {
     setIsValidating(false);
@@ -92,7 +93,7 @@ export const HeroSection = () => {
             </div>
             <div className="mt-4">
               <div className="text-sm sm:text-base md:text-lg text-gray-300 text-center">
-                Just drop your LinkedIn profile link below, and we'll guide you
+                Just drop your LinkedIn profile link below, and we&apos;ll guide you
               </div>
               <div className="text-sm sm:text-base md:text-lg text-gray-300 text-center">
                 through the journey.

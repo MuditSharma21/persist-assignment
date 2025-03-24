@@ -41,14 +41,16 @@ export default function LoginPage() {
         router.refresh();
       }
     } catch (error) {
+      console.log(error)
       toast.error("Something went wrong. Please try again.");
     } finally {
       setIsLoading(false);
     }
   };
   return (
-    <div className="container max-w-md mx-auto py-12">
-      <Card>
+    <div className="bg-gradient-to-tr from-black via-[rgb(104,52,164)] via-65% to-[rgb(31,30,30)] h-screen">
+      <div className="container max-w-md mx-auto py-12">
+      <Card className="bg-transparent text-white">
         <CardHeader>
           <CardTitle className="text-2xl text-center">Welcome Back</CardTitle>
         </CardHeader>
@@ -80,7 +82,7 @@ export default function LoginPage() {
                 required
               />
             </div>
-            <Button type="submit" className="w-full" disabled={isLoading}>
+            <Button type="submit" className="w-full hover:bg-white hover:text-black" disabled={isLoading}>
               {isLoading ? "Signing In..." : "Sign In"}
             </Button>
           </form>
@@ -94,6 +96,7 @@ export default function LoginPage() {
           </div>
         </CardContent>
       </Card>
+    </div>
     </div>
   );
 }

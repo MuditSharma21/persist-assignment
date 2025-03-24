@@ -15,7 +15,7 @@ export const Footer = () => {
                         Where Developers Get Coding Jobs
                     </div>
                     <p className="text-xs sm:text-sm text-gray-400 mt-2 w-full md:w-3/4">
-                        Find your dream coding job with ease! Our platform connects developers to top companies, offering tailored job matchers for fast, hassle-free firing. Whether you're just starting or an experienced pro, we help you land the perfect role and advance your career.
+                        Find your dream coding job with ease! Our platform connects developers to top companies, offering tailored job matchers for fast, hassle-free firing. Whether you&apos;re just starting or an experienced pro, we help you land the perfect role and advance your career.
                     </p>
                 </div>
                 <div className="flex flex-col sm:flex-row sm:justify-between md:justify-end gap-6 md:gap-x-10 text-sm/6 mt-4 md:mt-13 px-4 md:pr-13">

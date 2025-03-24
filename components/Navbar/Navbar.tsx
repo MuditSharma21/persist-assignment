@@ -8,7 +8,7 @@ import { Menu, X } from "lucide-react"
 import { useSession } from "next-auth/react"
 
 export const Navbar = () => {
-    const { data: session, status } = useSession()
+    const { data: session, status } = useSession() // eslint-disable-line @typescript-eslint/no-unused-vars
     const [isMenuOpen, setIsMenuOpen] = useState(false)
 
     const toggleMenu = () => {

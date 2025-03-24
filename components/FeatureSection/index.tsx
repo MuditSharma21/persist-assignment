@@ -25,10 +25,10 @@ export const FeatureSection = () => {
               job - so what sets you apart?
             </div>
             <p className="text-xs md:text-sm text-gray-300 font-semibold">
-              Truth is, everyone's grinding LeetCode, attending bootcamps, and following the same playbook. But landing the job isn't just about coding skills-it's about knowing how to get hired.
+              Truth is, everyone&apos;s grinding LeetCode, attending bootcamps, and following the same playbook. But landing the job isn&apos;t just about coding skills-it&apos;s about knowing how to get hired.
             </p>
             <p className="text-xs md:text-sm mt-2 text-gray-300 font-semibold">
-              That's why you see less-skilled candidates securing top roles while others struggle. The real advantage? Mastering the jon hunt, not just the code.
+              That&apos;s why you see less-skilled candidates securing top roles while others struggle. The real advantage? Mastering the jon hunt, not just the code.
             </p>
             <Link href={'#hero'}>
               <Button className="p-4 text-xs mt-6 rounded-full bg-[rgb(149,126,234)] text-white hover:text-black shadow-[inset_0px_2px_20px_-3px_rgba(_255,_255,_255,1)]">
