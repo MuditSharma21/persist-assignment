@@ -57,7 +57,6 @@ function ParallaxText({ children, baseVelocity = 100 }: ParallaxProps) {
   );
 }
 
-// The logos array
 const logos = [
   { src: '/logos/google.png', alt: 'Google logo', invert: false },
   { src: '/logos/amazon.png', alt: 'Amazon logo', invert: false },

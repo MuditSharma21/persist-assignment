@@ -22,7 +22,6 @@ interface JobCardProps {
   }) => {
     return (
       <div className="bg-black text-white w-full max-w-xs rounded-lg overflow-hidden shadow-lg border-white border">
-        {/* Job type tags */}
         <div className="flex gap-2 p-4">
           <span className="bg-zinc-800 text-white px-3 py-1 rounded-full text-sm">
             {jobType}
@@ -32,9 +31,7 @@ interface JobCardProps {
           </span>
         </div>
         
-        {/* Job info section */}
         <div className="px-4 pb-4 flex items-center gap-3">
-          {/* Logo */}
           <div className="h-10 w-10 relative">
             <Image
               src={logoSrc}
@@ -45,17 +42,14 @@ interface JobCardProps {
             />
           </div>
           
-          {/* Title and company */}
           <div>
             <h2 className="text-xl font-semibold">{jobTitle}</h2>
             <p className="text-gray-400 text-sm">{companyName}</p>
           </div>
         </div>
         
-        {/* Divider */}
         <div className="border-t border-zinc-800"></div>
         
-        {/* Footer info */}
         <div className="px-4 py-3 flex justify-between items-center">
           <div className="flex items-center">
             <span className="text-yellow-500 mr-1">💰</span>
@@ -67,7 +61,6 @@ interface JobCardProps {
           </div>
         </div>
         
-        {/* View details button */}
         <div className="px-4 pb-4">
           <button className="bg-violet-600 text-white w-32 py-2 rounded-lg text-sm">
             View Details

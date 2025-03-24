@@ -48,15 +48,13 @@ export const HeroSection = () => {
       confettiNumber: 200,
     });
     
-    // Short delay to enjoy the confetti before redirect
     setTimeout(() => {
       router.push("/signup");
     }, 1000);
 
-    // Success toast
-    toast.success("LinkedIn URL saved successfully!");  // Sonner success toast
+    toast.success("LinkedIn URL saved successfully!");
   } catch (error) {
-    toast.error("Something went wrong. Please try again.");  // Sonner error toast
+    toast.error("Something went wrong. Please try again.");
   } finally {
     setIsValidating(false);
   }

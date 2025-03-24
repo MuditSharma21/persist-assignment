@@ -1,6 +1,6 @@
 "use client"
 import React, { useState } from 'react';
-import { Eye, EyeClosed, EyeOff } from 'lucide-react';
+import { Eye, EyeOff } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
 const AccordionItem = ({ number, title, content }: { number: string; title: string; content: string }) => {

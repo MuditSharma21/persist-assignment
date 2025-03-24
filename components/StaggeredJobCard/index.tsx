@@ -5,7 +5,7 @@ const StaggeredJobCards = () => {
     return (
       <WobbleCard className="bg-transparent border-none w-full">
         <div className="relative flex flex-col md:items-end h-[180px]">
-          {/* First card - positioned at the back */}
+          {/* First card */}
           <div className="absolute z-30 transform translate-y-32 -translate-x-32 md:translate-x-11 md:translate-y-12">
             <JobCard
               jobTitle="Flutter Developer"

@@ -37,7 +37,7 @@ export async function POST(req: Request) {
     }
     
     // Create verified user in the actual users table
-    const user = await prisma.user.create({
+    const user = await prisma.user.create({ // eslint-disable-line @typescript-eslint/no-unused-vars
       data: {
         name: pendingUser.name,
         email: pendingUser.email,

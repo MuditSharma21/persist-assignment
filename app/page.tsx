@@ -1,7 +1,6 @@
 import { FeatureSection } from "@/components/FeatureSection";
 import { Footer } from "@/components/Footer/footer";
 import { HeroSection } from "@/components/HeroSection";
-import JobCard from "@/components/JobCard";
 import { Navbar } from "@/components/Navbar/Navbar"
 import ScrollAnimation from "@/components/ScrollAnimation/ScrollAnimation";
 import { SocialSection } from "@/components/SocialSection";

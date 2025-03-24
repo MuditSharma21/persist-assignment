@@ -1,6 +1,5 @@
 "use client"
 
-// import { useRouter } from "next/navigation";
 import Accordion from "../Accordion/accordion"
 import { Button } from "../ui/button"
 import { Card } from "../ui/card"
@@ -8,10 +7,10 @@ import { Card } from "../ui/card"
 export const SupportSection = () => {
     const emailAddress = "team@devscareeraccelerator.com";
     const handleMailto = (e: any) => {
-      e.preventDefault(); // Prevent default browser behavior
+      e.preventDefault()
       const emailAddress = "team@devscareeraccelerator.com";
       const mailto = `mailto:${emailAddress}`;
-      window.location.href = mailto; // Safely redirect
+      window.location.href = mailto;
     };
     
     return (
@@ -45,14 +44,9 @@ export const SupportSection = () => {
                             Got questions or need assistance with the program? Our team is just an email away. Reach out anytime, and we'll be happy to support you on your journey!
                         </div>
                         <div className="w-full flex justify-center mt-4 md:mt-6">
-                            {/* <a 
-                                href="mailto:team@devscareeraccelerator.com"
-                                className="inline-block"
-                            > */}
                                 <Button className="p-2 sm:p-3 md:p-4 text-xs rounded-full bg-[rgb(149,126,234)] text-white hover:text-black shadow-[inset_0px_2px_20px_-3px_rgba(_255,_255,_255,1)] max-w-xs sm:max-w-sm md:max-w-md truncate" onClick={handleMailto}>
                                     {emailAddress}
                                 </Button>
-                            {/* </a> */}
                         </div>
                     </div>
                 </Card>

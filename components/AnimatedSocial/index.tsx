@@ -8,7 +8,6 @@ import { Card } from "@/components/ui/card";
 import { WobbleCard } from "../WobbleCard/wobble-card";
 import { RightArrow } from "../RightArrow";
 import { LeftArrow } from "../LeftArrow";
-import JobCard from "../JobCard";
 import StaggeredJobCards from "../StaggeredJobCard";
 import { UserProfileCard } from "../ProfileCard";
 

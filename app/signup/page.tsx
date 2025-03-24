@@ -281,7 +281,7 @@ export default function SignupPage() {
             ) : (
               <div className="space-y-4">
                 <div className="text-center text-sm text-gray-300 mb-4">
-                  We've sent a verification code to {form.getValues("email")}
+                  We&apos;ve sent a verification code to {form.getValues("email")}
                 </div>
                 <div className="space-y-2">
                   <label>Enter Verification Code</label>
